@@ -1,0 +1,60 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+html .App,
+body .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px 0;
+}
+html .App form input,
+body .App form input {
+  font-size: 1.2rem;
+  padding: 8px 30px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: none;
+  outline: none;
+  margin-bottom: 50px;
+}
+html .App form button,
+body .App form button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 11px 30px;
+  border: none;
+  background-color: dodgerblue;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  top: -2px;
+  outline: none;
+  color: #fff;
+}
+html .App .err,
+body .App .err {
+  padding: 15px 30px;
+  background-color: #fff5f5 !important;
+  color: #ff9999;
+  font-weight: bold;
+  border: 2px solid #ff9999;
+  border-radius: 30px;
+}
+html .App .dog-container,
+body .App .dog-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+html .App .dog-container .dog-image,
+body .App .dog-container .dog-image {
+  height: 300px;
+  margin: 0 20px 30px;
+  border: 1px solid slategray;
+}
