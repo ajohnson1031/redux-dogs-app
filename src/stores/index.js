@@ -1,5 +1,5 @@
 export const initialState = {
-  breed: "",
+  allBreeds: [],
   images: [],
   isLoading: false,
   err: null

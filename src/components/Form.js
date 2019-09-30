@@ -1,19 +1,21 @@
-import React from "react";
-import { directive } from "@babel/types";
+import React, { useEffect } from "react";
 
-const Form = ({ state, fetchBreed, updateBreed }) => {
+const Form = ({ state, fetchBreed, fetchAllBreeds }) => {
+  useEffect(() => {
+    fetchAllBreeds();
+  }, [fetchAllBreeds]);
   return (
     <>
-      <h1>Dog Breed Search Engine</h1>
+      <h1>Dog Breed Image Database</h1>
       <form action="">
-        <input
-          type="text"
-          name="breed"
-          value={state.breed}
-          onChange={e => updateBreed(e.target.value)}
-          placeholder="Enter desired breed..."
-        />
-        <button onClick={e => fetchBreed(e, state.breed)}>Search</button>
+        <select onChange={e => fetchBreed(e.target.value)}>
+          <option value={0}>Select Dog Breed...</option>
+          {state.allBreeds.map((breed, i) => (
+            <option key={i} value={breed}>
+              {breed[0].toUpperCase() + breed.substr(1)}
+            </option>
+          ))}
+        </select>
       </form>
       {state.err && <div className="err">{state.err}</div>}
     </>
